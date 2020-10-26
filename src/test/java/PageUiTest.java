@@ -16,11 +16,9 @@ public class PageUiTest {
         Calendar cl = new GregorianCalendar();
         cl.add(Calendar.DATE, 7);
         if (trim) {
-            SimpleDateFormat fDate = new SimpleDateFormat("dd");
-            return Integer.toString(Integer.parseInt(fDate.format(cl.getTime())));
+            return new SimpleDateFormat("d").format(cl.getTime());
         } else {
-            SimpleDateFormat fDate = new SimpleDateFormat("dd.MM.yyyy");
-            return fDate.format(cl.getTime());
+            return new SimpleDateFormat("dd.MM.yyyy").format(cl.getTime());
         }
     }
 
