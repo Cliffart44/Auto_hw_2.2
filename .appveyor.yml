@@ -5,6 +5,7 @@ stack: jdk 11
 branches:
   only:
     - main
+    - otherwise_manner
 
 build: off
 
@@ -16,4 +17,4 @@ install:
   - sudo apt-get install google-chrome-stable
 
 build_script:
-  - ./gradlew test --info
+  - ./gradlew test --info "-Dselenide.headless=true"
