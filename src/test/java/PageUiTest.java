@@ -35,10 +35,10 @@ public class PageUiTest {
         $("[data-test-id=city] .input__control").setValue("Мо");
         $$(".menu-item__control").findBy(text("Москва")).click();
         $("[data-test-id=date] [placeholder=\"Дата встречи\"]").sendKeys(Keys.chord(Keys.SHIFT, Keys.HOME), Keys.BACK_SPACE, when(false), Keys.CONTROL + "A", Keys.DELETE);
-        $("[data-step=1]").click();
-        $("[data-step=-1]").click();
-        $("[data-step=12]").click();
-        $("[data-step=-12]").click();
+        $("[data-step=\"1\"]").click();
+        $("[data-step=\"-1\"]").click();
+        $("[data-step=\"12\"]").click();
+        $("[data-step=\"-12\"]").click();
         $$(".calendar__day").findBy(text(when(true))).click();
         $("[data-test-id=name] [name=name]").setValue("Альберт Эйнштейн");
         $("[data-test-id=phone] [name=phone]").setValue("+14318791955");
