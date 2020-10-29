@@ -27,7 +27,7 @@ public class PageUiTest {
         $("[data-test-id=city] .input__control").setValue("Мо");
         $$(".menu-item__control").findBy(text("Москва")).click();
         $("[data-test-id=date] [placeholder=\"Дата встречи\"]").sendKeys(Keys.chord(Keys.SHIFT, Keys.HOME), Keys.BACK_SPACE, LocalDate.now().plusDays(7).format(DateTimeFormatter.ofPattern("dd.MM.uuuu")), Keys.CONTROL + "A", Keys.DELETE);
-//        $$(".calendar__day").findBy(text(LocalDate.now().plusDays(7).format(DateTimeFormatter.ofPattern("d")))).click();
+        $$(".calendar__day").findBy(text(LocalDate.now().plusDays(7).format(DateTimeFormatter.ofPattern("d")))).click();
         $("[data-test-id=name] [name=name]").setValue("Альберт Эйнштейн");
         $("[data-test-id=phone] [name=phone]").setValue("+14318791955");
         $("[data-test-id=agreement]>.checkbox__box").click();
