@@ -11,6 +11,13 @@ import static com.codeborne.selenide.Condition.*;
 
 public class PageUiTest {
 
+//    @NotNull
+//    private String when(boolean trim) {
+//        long daysToAdd = 7;
+//        if (trim) return LocalDate.now().plusDays(daysToAdd).format(DateTimeFormatter.ofPattern("d"));
+//        else return LocalDate.now().plusDays(daysToAdd).format(DateTimeFormatter.ofPattern("dd.MM.uuuu"));
+//    }
+
     @NotNull
     private String when(boolean trim) {
         Calendar cl = new GregorianCalendar();
