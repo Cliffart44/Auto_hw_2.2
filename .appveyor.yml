@@ -1,4 +1,4 @@
-image: Ubuntu
+image: Ubuntu2004
 
 stack: jdk 11
 
@@ -12,8 +12,8 @@ install:
   - java -jar ./artifacts/app-card-delivery.jar &
   - wget -q -O - https://dl-ssl.google.com/linux/linux_signing_key.pub | sudo apt-key add -
   - sudo sh -c 'echo "deb http://dl.google.com/linux/chrome/deb/ stable main" >> /etc/apt/sources.list.d/google-chrome.list'
-  - sudo apt-get update
-  - sudo apt-get install google-chrome-stable
+  - sudo apt-get -qq update
+  - sudo apt-get install google-chrome-stable > /dev/null
 
 build_script:
   - ./gradlew test --info

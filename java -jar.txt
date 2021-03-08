@@ -1,0 +1,3 @@
+java -jar artifacts/app-card-delivery.jar
+
+https://www.selenium.dev/documentation/en/support_packages/working_with_colours/
